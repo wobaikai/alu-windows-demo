@@ -1,0 +1,359 @@
+/* ===== 网站外观 =====
+   改颜色主要改下面 :root 里几个变量的值即可 */
+:root {
+  --primary: #6d28d9;      /* 主色：深蓝，像门窗的沉稳感 */
+  --primary-dark: #0a345a;
+  --accent: #f59e0b;       /* 强调色：橙色，用来做按钮 */
+  --text: #333333;
+  --text-light: #666666;
+  --bg-gray: #f4f6f8;
+  --white: #ffffff;
+}
+
+/* ===== 基础设置 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;  /* 点导航时平滑滚动 */
+}
+
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+/* ===== 导航栏 ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.nav-toggle {
+  display: none;  /* 电脑上不显示，手机上才显示 */
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== 首屏 ===== */
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary) 55%, #1a6a9f);
+  color: var(--white);
+  padding: 110px 0;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  line-height: 1.35;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  opacity: 0.92;
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #222;
+  font-weight: 700;
+}
+
+.btn-outline {
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== 通用板块 ===== */
+.section {
+  padding: 80px 0;
+}
+
+.section-gray {
+  background: var(--bg-gray);
+}
+
+.section-dark {
+  background: var(--primary-dark);
+  color: var(--white);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.section-dark .section-title {
+  color: var(--white);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 44px;
+}
+
+.section-dark .section-subtitle {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ===== 服务卡片 ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* ===== 为什么选我们 ===== */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.feature {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px;
+  border-left: 5px solid var(--accent);
+}
+
+.feature h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  color: var(--primary);
+}
+
+.feature p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* ===== 案例展示 ===== */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.work-item {
+  height: 220px;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-end;
+  color: var(--white);
+  padding: 16px;
+  font-size: 0.9rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+}
+
+/* 案例照片：images 文件夹里的真实图片（目前是免费图库示意照，可替换） */
+.work-1 {
+  background-image: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.05) 70%),
+    url("images/case1.jpg");
+}
+.work-2 {
+  background-image: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.05) 70%),
+    url("images/case2.jpg");
+}
+.work-3 {
+  background-image: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.05) 70%),
+    url("images/case3.jpg");
+}
+.work-4 {
+  background-image: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.05) 70%),
+    url("images/case4.jpg");
+}
+
+/* ===== 联系区 ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.contact-grid p {
+  margin-bottom: 12px;
+  font-size: 1.02rem;
+}
+
+.map-placeholder {
+  border: 2px dashed rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  min-height: 180px;
+}
+
+/* ===== 页脚 ===== */
+.footer {
+  background: #0b2438;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  padding: 22px 0;
+  font-size: 0.9rem;
+}
+
+/* ===== 手机 / 小屏幕适配 ===== */
+@media (max-width: 900px) {
+  .card-grid,
+  .feature-grid,
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 70px 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  /* 手机菜单默认收起，点按钮后展开 */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 12px 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 6%;
+  }
+
+  .card-grid,
+  .feature-grid,
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

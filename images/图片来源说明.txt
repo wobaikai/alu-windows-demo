@@ -1,0 +1,15 @@
+案例照片目前是 Wikimedia Commons 免费图库的示意照片，仅用于演示。
+
+case1.jpg：RCE（荷兰文化遗产局）摄，CC BY-SA 4.0
+  https://commons.wikimedia.org/wiki/File:Interieur_woning_in_Buitenveldert,_aanzicht_raam_en_deur_met_glas_in_geanodiseerd_aluminium_van_Ted_Felen_-_Amsterdam_-_20366727_-_RCE.jpg
+
+case2.jpg：Coruberbenda 摄，CC BY-SA 3.0
+  https://commons.wikimedia.org/wiki/File:HK_Disneyland_Hotel_Room_陽台_Balcony_Glass_door_椅子_Armchair_in_white.JPG
+
+case3.jpg：Georg Pik 摄，CC0（可自由使用）
+  https://commons.wikimedia.org/wiki/File:Sunroom._The_patrimony_of_Santa_Claus_(02).jpg
+
+case4.jpg：美国林务局摄，公有领域
+  https://commons.wikimedia.org/wiki/File:Window_Installation_(5105188223).jpg
+
+如果网站以后正式给家里用，建议把这些图换成自家拍的真实照片，并删除本说明。
